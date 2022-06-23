@@ -19,7 +19,7 @@ function NewQuotes() {
        console.log(quoteData);
     }
     return ( 
-        <QuoteForm isLoading={status === ''} onAddQuote={addQuoteHandler}/>
+        <QuoteForm isLoading={status === 'pending'} onAddQuote={addQuoteHandler}/>
      );
 }
 
