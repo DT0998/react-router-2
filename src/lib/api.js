@@ -1,6 +1,6 @@
 const FIREBASE_DOMAIN = 'https://react-http-94b8c-default-rtdb.asia-southeast1.firebasedatabase.app';
 
-// fetch func
+// get func
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
   const data = await response.json();
@@ -22,7 +22,7 @@ export async function getAllQuotes() {
 
   return transformedQuotes;
 }
-// fetch func
+// get func
 export async function getSingleQuote(quoteId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes/${quoteId}.json`);
   const data = await response.json();
@@ -38,7 +38,7 @@ export async function getSingleQuote(quoteId) {
 
   return loadedQuote;
 }
-// fetch func
+// post func
 export async function addQuote(quoteData) {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`, {
     method: 'POST',
@@ -73,7 +73,7 @@ export async function addComment(requestData) {
   return { commentId: data.name };
 }
 
-// fetch func
+// get func
 export async function getAllComments(quoteId) {
   const response = await fetch(`${FIREBASE_DOMAIN}/comments/${quoteId}.json`);
 
