@@ -1,5 +1,5 @@
 import React from 'react';
-import {useHistory,useLocation} from 'react-router-dom'
+import {useLocation, useNavigate} from 'react-router-dom'
 import QuoteItem from './QuoteItem';
 import classes from './QuoteList.module.css';
 
@@ -16,7 +16,7 @@ const sortQuotes = (quotes, ascending) => {
 };
 
 const QuoteList = (props) => {
-  const history = useHistory();
+  const history = useNavigate();
   const location = useLocation();
 
   const queryParams = new URLSearchParams(location.search);
